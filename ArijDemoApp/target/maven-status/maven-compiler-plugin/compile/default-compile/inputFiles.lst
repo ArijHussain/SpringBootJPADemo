@@ -1,2 +1,6 @@
 C:\Users\Arij\Desktop\Work\ArijDemoApp\src\main\java\com\example\ArijDemoAppApplication.java
-C:\Users\Arij\Desktop\Work\ArijDemoApp\src\main\java\com\example\DemoAppController.java
+C:\Users\Arij\Desktop\Work\ArijDemoApp\src\main\java\com\example\Controller\UserInfoController.java
+C:\Users\Arij\Desktop\Work\ArijDemoApp\src\main\java\com\example\Dao\UserDao.java
+C:\Users\Arij\Desktop\Work\ArijDemoApp\src\main\java\com\example\model\AppUser.java
+C:\Users\Arij\Desktop\Work\ArijDemoApp\src\main\java\com\example\config\DatabaseConfig.java
+C:\Users\Arij\Desktop\Work\ArijDemoApp\src\main\java\com\example\Controller\DemoAppController.java

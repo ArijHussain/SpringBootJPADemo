@@ -1,0 +1,6 @@
+{
+name : "Raj",
+userId : 2,
+address : "Kaiserslautern",
+userType: "Passenger"
+}

@@ -1,0 +1,10 @@
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade
+drop table if exists userinfo cascade

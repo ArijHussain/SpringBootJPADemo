@@ -4,6 +4,7 @@ import com.example.Dao.UserDao;
 import com.example.model.AppUser;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,8 +28,12 @@ public class UserInfoController {
             produces = "application/json")
     public String createUser() throws FileNotFoundException {
 
+
+        //String dir = System.getProperty("user.dir");
+      //  System.out.println("dir=============="+dir);
+       // dir.concat("\\src\\main\\resources\\JSON-Files\\user1.json");
         Gson gson = new Gson();
-        AppUser user = gson.fromJson(new FileReader("C:\\Users\\Arij\\Desktop\\Work\\SampleJson\\user1.json"), AppUser.class);
+        AppUser user = gson.fromJson(new FileReader("src\\main\\resources\\JSON-Files\\user1.json"), AppUser.class);
         try {
             userDao.create(user);
         }
@@ -46,7 +51,7 @@ public class UserInfoController {
     public String deleteUser() throws FileNotFoundException {
 
         Gson gson = new Gson();
-        AppUser user = gson.fromJson(new FileReader("C:\\Users\\Arij\\Desktop\\Work\\SampleJson\\user3.json"), AppUser.class);
+        AppUser user = gson.fromJson(new FileReader("src\\main\\resources\\JSON-Files\\user1.json"), AppUser.class);
         try {
             userDao.delete(user);
         }
@@ -59,13 +64,13 @@ public class UserInfoController {
     /**
      * Get the name of the user identified by the id
      */
-    @RequestMapping(value = "/namebyid", method = RequestMethod.GET,
+    @RequestMapping(value = "/namebyid/{id}", method = RequestMethod.GET,
             produces = "application/json")
-    public String getUserNameById() throws FileNotFoundException {
+    public String getUserNameById(@PathVariable int id) throws FileNotFoundException {
 
         String userName;
         try {
-          AppUser appUser =  userDao.getUserById(30);
+          AppUser appUser =  userDao.getUserById(id);
           userName = appUser.getName();
         }
         catch (Exception ex) {

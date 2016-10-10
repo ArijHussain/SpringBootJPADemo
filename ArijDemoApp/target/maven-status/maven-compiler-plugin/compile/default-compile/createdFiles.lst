@@ -1,2 +1,6 @@
-com\example\DemoAppController.class
+com\example\Controller\DemoAppController.class
 com\example\ArijDemoAppApplication.class
+com\example\config\DatabaseConfig.class
+com\example\Dao\UserDao.class
+com\example\model\AppUser.class
+com\example\Controller\UserInfoController.class
